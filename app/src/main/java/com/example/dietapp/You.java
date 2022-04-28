@@ -12,8 +12,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,8 +23,15 @@ import java.util.Locale;
 
 public class You extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    float bmi;
+    float weight, height;
+    int agedate;
+
     EditText age;
-   Calendar calendar;
+    Calendar calendar;
+    RadioButton male,female;
+    EditText inputweight, inputheight;
+
 
     private Spinner spinner;
     private Button button;
@@ -32,10 +41,20 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
         setContentView(R.layout.activity_you);
 
         spinnermethod();
+        age = findViewById(R.id.age);
+        male = findViewById(R.id.male);
+        female = findViewById(R.id.female);
+        inputweight = findViewById(R.id.inputweight);
+        inputheight = findViewById(R.id.inputheight);
         button = (Button) findViewById(R.id.btn1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                weight = Float.valueOf(inputweight.getText().toString());
+                height = Float.valueOf(inputheight.getText().toString());
+                bmi = weight/(height*height);
+
+                showtoast(String.valueOf(bmi));
                 opennextpage();
             }
         });
@@ -43,11 +62,10 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                previousPage();
-            }
+            public void onClick(View view) { previousPage(); }
         });
         etdob();
+
     }
     public void opennextpage() {
         Intent intent = new Intent(this, Goals.class);
@@ -106,4 +124,9 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
                 }
             });
         };
+
+    private void showtoast(String Text){
+        Toast.makeText(this, "Your Bmi is" +Text, Toast.LENGTH_SHORT).show();
+    }
+
 }
