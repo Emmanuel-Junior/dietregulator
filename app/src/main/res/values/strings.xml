@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Dietapp</string>
+    <string name="todo">TODO</string>
+    <string name="loss_weight">Loss Weight</string>
+    <string name="goal">What is your goal?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="page2">Page2</string>
+    <string name="diet_app">Diet App</string>
+    <string name="what_is_your_goal">What is your goal?</string>
+    <string name="gain_weight">Gain Weight</string>
+    <string name="lose_weight">Lose Weight</string>
+    <string name="maintain_weight">Maintain weight</string>
+    <string name="next1">Next</string>
+    <string name="you_activity">You Activity</string>
+    <string name="next3">Next</string>
+    <string name="please_select_your_sex">Please select your sex</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="what_is_your_age">What is your age?</string>
+    <string name="next">Next</string>
+    <string name="weight">Weight</string>
+    <string name="age">Age</string>
+    <string name="choose_your_weight">Choose your weight</string>
+
+    <string-array name="weightunits">
+        <item>Kg</item>
+        <item>lbs</item>
+    </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="finish" />
+    <string name="my_diary">My Diary</string>
+    <string name="string_my_diary" />
+
+    <style name="TextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#aacbb4</item>
+    </style>
+</resources>

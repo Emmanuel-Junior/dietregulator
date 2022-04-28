@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Goals"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Dietapp.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleMarginStart="40dp"
+        android:background="@color/green_2"
+        app:logo="@drawable/ic_arrow_back">
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/rltvlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Choose your objective"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="355dp"
+            android:layout_height="58dp"
+            android:layout_below="@id/textView2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/outline_buttonstyle"
+            android:onClick="onOutlinedbtnclicked"
+            android:text="@string/lose_weight"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="355dp"
+            android:layout_height="58dp"
+            android:layout_below="@id/button1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/outline_buttonstyle"
+            android:onClick="onOutlinedbtnclicked"
+            android:text="@string/maintain_weight"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="355dp"
+            android:layout_height="58dp"
+            android:layout_below="@id/button2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/outline_buttonstyle"
+            android:onClick="onOutlinedbtnclicked"
+            android:text="@string/gain_weight"
+            tools:ignore="TextContrastCheck" />
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="355dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/round_bg"
+            android:text="@string/next1"
+            android:textColor="@color/blu_white"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

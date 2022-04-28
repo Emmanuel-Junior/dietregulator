@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Dietapp.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleMarginStart="40dp"
+        app:logo="@drawable/ic_arrowbck">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/welcomtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start your diet filter Journey"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+    </TextView>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:fallbackLineSpacing="true"
+        android:lineSpacingExtra="4dp"
+        android:text="Manage your diets perfectly and Be your best weight"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomtitle"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:text="Your data is kept private"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/getstartedbtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/green_2"
+        android:fontFamily="cursive"
+        android:text="Get Started"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

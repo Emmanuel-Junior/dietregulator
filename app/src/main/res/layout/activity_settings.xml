@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Settings">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Dietapp.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleMarginStart="40dp"
+        app:logo="@drawable/ic_arrowbck">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/settingstxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"></TextView>
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingstxt">
+
+        <ImageView
+            android:id="@+id/profilepic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/myimage1"></ImageView>
+
+        <TextView
+            android:id="@+id/usernametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="casual"
+            android:text="Username"
+            android:textSize="25dp"></TextView>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/editprofilepicture"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_arrow_forward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingstxt"></View>
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PROFILE"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout1"></TextView>
+
+    <View
+        android:id="@+id/horizontalline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile">
+    </View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalline"
+        tools:ignore="SpeakableTextPresentCheck">
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

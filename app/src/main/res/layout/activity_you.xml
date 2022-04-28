@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".You">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        android:theme="@style/Theme.Dietapp.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_arrow_back"
+        app:title="Please fill this form"
+        app:titleMarginStart="40dp">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="282dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/please_select_your_sex"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="130dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/female" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="271dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="108dp"
+        android:text="Date of Birth"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="169dp"
+        android:autofillHints=""
+        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+        android:ems="10"
+        android:hint="@string/age"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
+        android:clickable="false"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:focusableInTouchMode="false"
+        />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="355dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_bg"
+        android:text="@string/next"
+        android:textColor="@color/blu_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/inputweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:drawableEnd="@drawable/ic_arrow_dropdown"
+        android:ems="10"
+        android:hint="Weight (kg)"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        tools:ignore="TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="68dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="63dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+     <TextView
+        android:id="@+id/textView7"
+        android:layout_width="38dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="85dp"
+        android:text="Kg"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner1"
+        app:layout_constraintStart_toEndOf="@+id/inputweight"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="201dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="178dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:text="Fill in your height"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputweight" />
+
+    <EditText
+        android:id="@+id/inputheight"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:drawableEnd="@drawable/ic_arrow_dropdown"
+        android:ems="10"
+        android:hint="Height"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
