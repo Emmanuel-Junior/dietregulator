@@ -163,7 +163,6 @@
                 android:layout_width="76dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -172,19 +171,19 @@
                 app:layout_constraintStart_toStartOf="@+id/progressBar"
                 app:layout_constraintTop_toTopOf="@+id/progressBar"
                 app:layout_constraintVertical_bias="0.314"
-                tools:text="2279" />
+                android:text="2279" />
 
             <TextView
                 android:id="@+id/text9"
                 android:layout_width="85dp"
                 android:layout_height="28dp"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/progressBar"
                 app:layout_constraintStart_toStartOf="@+id/progressBar"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_progress"
-                tools:text="kcal left" />
+                android:text="kcal left"
+                android:textSize="20dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -274,6 +273,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3"
         tools:ignore="SpeakableTextPresentCheck">
