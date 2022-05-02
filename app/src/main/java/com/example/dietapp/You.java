@@ -6,12 +6,15 @@ import androidx.appcompat.widget.Toolbar;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -50,15 +53,23 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                weight = Float.valueOf(inputweight.getText().toString());
-                height = Float.valueOf(inputheight.getText().toString());
-                bmi = weight/(height*height);
+                if(age.getText().toString().trim().length() == 0 ||
+                 inputweight.getText().toString().trim().length() == 0 ||
+                        inputheight.getText().toString().trim().length() == 0 ||
+                        male.getText().toString().trim().length() == 0 ){
+                    Toast.makeText(You.this, "Fill the form please", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    weight = Float.valueOf(inputweight.getText().toString());
+                    height = Float.valueOf(inputheight.getText().toString());
+                    bmi = weight / (height * height);
 
-                showtoast(String.valueOf(bmi));
-                opennextpage();
+                    opennextpage();
+                }
             }
         });
 
+        male.isChecked();
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,8 +136,5 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
             });
         };
 
-    private void showtoast(String Text){
-        Toast.makeText(this, "Your Bmi is" +Text, Toast.LENGTH_SHORT).show();
-    }
 
 }
