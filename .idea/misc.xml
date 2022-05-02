@@ -54,6 +54,7 @@
         <entry key="app/src/main/res/layout/activity_friends.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_goals.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.20649850363403163" />
+        <entry key="app/src/main/res/layout/activity_listof_food.xml" value="0.21419410004275333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_plans.xml" value="0.20649850363403163" />
@@ -63,6 +64,7 @@
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_you.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_items.xml" value="0.21419410004275333" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.165" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20649850363403163" />
       </map>
