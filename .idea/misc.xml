@@ -29,6 +29,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_outline_2.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_dinner.xml" value="0.207" />
+        <entry key="app/src/main/res/drawable/ic_done.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_email.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.208" />
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.2275" />
@@ -62,6 +63,7 @@
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_you.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/toast_layout.xml" value="0.165" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20649850363403163" />
       </map>
     </option>
