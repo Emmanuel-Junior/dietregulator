@@ -18,6 +18,7 @@
         <entry key="..\:/Users/NWABUFO GODSTIME/AndroidStudioProjects/Dietapp/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
         <entry key="..\:/Users/NWABUFO GODSTIME/AndroidStudioProjects/Dietapp/app/src/main/res/layout/activity_you.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/addbtn_bg.xml" value="0.207" />
+        <entry key="app/src/main/res/drawable/bg_radiobtn.xml" value="0.225" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/edittextbackground.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_add_circle.xml" value="0.25" />
@@ -54,15 +55,19 @@
         <entry key="app/src/main/res/layout/activity_friends.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_goals.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.20649850363403163" />
+        <entry key="app/src/main/res/layout/activity_listof_food.xml" value="0.21419410004275333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_plans.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_recipes.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.20649850363403163" />
-        <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.20649850363403163" />
+        <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_you.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/adddinnerbtnbg.xml" value="0.2159042325780248" />
+        <entry key="app/src/main/res/layout/adlunchbtnbg.xml" value="0.2159042325780248" />
+        <entry key="app/src/main/res/layout/list_items.xml" value="0.21419410004275333" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.165" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20649850363403163" />
       </map>

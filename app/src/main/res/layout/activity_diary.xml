@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eee"
+    android:background="#E8DCDC"
     tools:context=".Diary">
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:background="@color/green_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:background="@drawable/ic_wave__1_"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
@@ -251,8 +251,7 @@
         android:id="@+id/view3"
         android:layout_width="wrap_content"
         android:layout_height="65dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -266,70 +265,363 @@
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="348dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintTop_toBottomOf="@+id/view3">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-            <Button
-                android:id="@+id/breakfastbtn"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/addbtn_bg"
-                android:drawableEnd="@drawable/ic_add_circle"
-                android:paddingEnd="20dp"
-                android:text="Add Breakfast"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/lunchbtn"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/addbtn_bg"
-                android:drawableEnd="@drawable/ic_add_circle"
-                android:paddingEnd="20dp"
-                android:text="Add Lunch"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <RelativeLayout
+                    android:id="@+id/addB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/dinnerbtn"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/addbtn_bg"
-                android:drawableEnd="@drawable/ic_add_circle"
-                android:paddingEnd="20dp"
-                android:text="Add Dinner"
-                android:textAllCaps="false"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </ScrollView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/addbtn_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="1dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/mealbtnpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/frenchtoast"></de.hdodenhof.circleimageview.CircleImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/addmealtxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Add Breakfast"
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/mealbtnsubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Recommended 830-1170 kcal" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_add_circle" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/addbtn_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="1dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/luchbtnpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/lunch"></de.hdodenhof.circleimageview.CircleImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/lunchtxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Add Lunch"
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/lunchbtnsubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Recommended 830-1170 kcal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_add_circle" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addDr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/addbtn_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="1dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/dinnerbtnpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/dinner"></de.hdodenhof.circleimageview.CircleImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/dinnertxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Add Dinner"
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/dinnerbtnsubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Recommended 830-1170 kcal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_add_circle" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/horizontalline"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile"></View>
+
+                <RelativeLayout
+                    android:id="@+id/addW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/addbtn_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="1dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/waterbtnpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/glassofwater"></de.hdodenhof.circleimageview.CircleImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/watertxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Add Water"
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/waterbtnsubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Atleast 1.5 liter a day" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_add_circle" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/addE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/addbtn_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="1dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/exercisebtnpic"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/exercise"></de.hdodenhof.circleimageview.CircleImageView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/exercisetxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Add Exercise"
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/exercisebtnsubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="work twice a day" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_add_circle" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
