@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class Splashscreen extends AppCompatActivity {
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3500;
 //variables
     Animation topanim;
     ImageView image;

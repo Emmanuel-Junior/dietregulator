@@ -16,8 +16,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleMarginStart="40dp"
-        android:background="@color/green_2"
-        app:logo="@drawable/ic_arrow_back">
+        android:background="@color/green_2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="previousPage"
+                android:src="@drawable/ic_arrow_back" />
+        </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
 
@@ -32,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/choosetext"
             android:layout_width="270dp"
             android:layout_height="49dp"
             android:layout_marginStart="16dp"
@@ -43,47 +53,67 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/loseweight"
-            android:layout_width="355dp"
-            android:layout_height="58dp"
-            android:layout_below="@id/textView2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/outline_buttonstyle"
-            android:text="@string/lose_weight"
-            android:textColor="@color/black" />
 
-        <Button
-            android:id="@+id/maintainweight"
-            android:layout_width="355dp"
-            android:layout_height="58dp"
-            android:layout_below="@id/loseweight"
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choosetext"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="28dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/outline_buttonstyle"
-            android:text="@string/maintain_weight"
-            tools:ignore="TextContrastCheck" />
+            android:layout_marginTop="22dp">
 
-        <Button
-            android:id="@+id/gainweight"
-            android:layout_width="355dp"
-            android:layout_height="58dp"
-            android:layout_below="@id/maintainweight"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/outline_buttonstyle"
-            android:text="@string/gain_weight"
-            tools:ignore="TextContrastCheck" />
+            <RadioButton
+                android:id="@+id/loseweight"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/bg_radiobtn"
+                android:text="@string/lose_weight"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:button="@null"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/maintainweight"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="0dp"
+                android:textAlignment="center"
+                android:button="@null"
+                android:textSize="20dp"
+                android:background="@drawable/bg_radiobtn"
+                android:text="@string/maintain_weight"/>
+
+            <RadioButton
+                android:id="@+id/gainweight"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_below="@id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="22dp"
+                android:textAlignment="center"
+                android:layout_marginEnd="0dp"
+                android:button="@null"
+                android:textSize="20dp"
+                android:background="@drawable/bg_radiobtn"
+                android:text="@string/gain_weight"/>
+        </RadioGroup>
 
 
         <Button
@@ -100,5 +130,9 @@
             android:text="@string/next1"
             android:textColor="@color/blu_white"
             tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
     </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
