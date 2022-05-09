@@ -22,23 +22,18 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-
-
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="197dp"
+        android:layout_width="260dp"
         android:layout_height="43dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="41dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="5dp"
-        android:text="What is your target?"
+        android:text="What is your target weight?"
         android:textColor="@color/black"
         android:textSize="20sp"
 
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
         android:id="@+id/button1"
@@ -55,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal3"
+        android:id="@+id/targetweight"
         android:layout_width="210dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
@@ -66,5 +61,71 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:ignore="TextContrastCheck" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetweight">
+
+        <RadioButton
+            android:id="@+id/notactive"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/radiobg2"
+            android:button="@null"
+            android:text="Not Active \n(Reading, watching tv)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/fairlyactivet"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/radiobg2"
+            android:button="@null"
+            android:text="Fairly Active \n(Teacher,office work, school)"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/active"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/radiobg2"
+            android:button="@null"
+            android:text="Active \n(e.g Agriculture,capenter) "
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/veryactive"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/radiobg2"
+            android:button="@null"
+            android:text="Very Active \n(e.g Pro athlete, mining) "
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,7 +43,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you);
 
-        spinnermethod();
+//        spinnermethod();
         age = findViewById(R.id.age);
         male = findViewById(R.id.male);
         female = findViewById(R.id.female);
@@ -88,13 +88,13 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
-    public void spinnermethod(){
-        spinner = findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.weightunits, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
-    }
+//    public void spinnermethod(){
+//        spinner = findViewById(R.id.spinner1);
+//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.weightunits, android.R.layout.simple_spinner_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(this);
+//    }
     @Override
     public void finish() {
         super.finish();
