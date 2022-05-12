@@ -14,5 +14,7 @@
     <color name="color1">#14e2d3</color>
     <color name="purple">#535bd6</color>
     <color name="green1">#14e2d3</color>
-    <color name="green_2">#34CCD9</color>
+    <!--<color name="green_2">#34CCD9</color>-->
+    <color name="green_2">#2C42BD</color>
+    <color name="light_grey">#D2D2D2</color>
 </resources>

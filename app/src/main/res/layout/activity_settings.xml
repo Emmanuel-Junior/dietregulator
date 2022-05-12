@@ -78,7 +78,7 @@
         android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearlayout1"></TextView>
+        app:layout_constraintTop_toBottomOf="@id/linearlayout1" />
 
     <View
         android:id="@+id/horizontalline"
