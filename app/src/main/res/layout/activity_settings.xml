@@ -773,13 +773,15 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:background="@drawable/ic_arrow_forward" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
                 </RelativeLayout>
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp"/>
         </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 
 
