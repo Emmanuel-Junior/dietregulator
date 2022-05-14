@@ -90,6 +90,8 @@
         <entry key="app/src/main/res/layout/activity_you.xml" value="0.25" />
         <entry key="app/src/main/res/layout/adddinnerbtnbg.xml" value="0.2159042325780248" />
         <entry key="app/src/main/res/layout/adlunchbtnbg.xml" value="0.2159042325780248" />
+        <entry key="app/src/main/res/layout/fragment_diary.xml" value="0.20350577169730655" />
+        <entry key="app/src/main/res/layout/fragment_diary2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_items.xml" value="0.21419410004275333" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.165" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20649850363403163" />
