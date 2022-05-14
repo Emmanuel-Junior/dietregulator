@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="wrap_content"
         android:background="@color/green_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +21,10 @@
             android:layout_width="0dp"
             android:layout_height="69dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
 
             android:orientation="horizontal">
 
@@ -323,7 +323,7 @@
     <RelativeLayout
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_wave__1_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1086845207070",
+    "firebase_url": "https://dietregulator-default-rtdb.firebaseio.com",
+    "project_id": "dietregulator",
+    "storage_bucket": "dietregulator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086845207070:android:c867de0dc3e2ec69a8640f",
+        "android_client_info": {
+          "package_name": "com.example.dietapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086845207070-o7qblu2e3daerg6ccc45h73rdpq6unu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnJhVIsPe7lrTqAWNL6FP-1jXxx36yGDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086845207070-o7qblu2e3daerg6ccc45h73rdpq6unu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
