@@ -12,8 +12,10 @@
         android:title="Diary"/>
 
     <item
-        android:id="@+id/placeholder"
-        android:title=""/>
+        android:id="@+id/menufloatbtn"
+        android:title=""
+        android:icon="@drawable/ic_floatbtn">
+    </item>
 
     <item
         android:id="@+id/Recipes"
