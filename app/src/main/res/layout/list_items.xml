@@ -2,23 +2,60 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardElevation="8dp"
-    app:cardCornerRadius="8dp"
-    android:layout_margin="8dp">
+    android:layout_width="match_parent"                         
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/addbtn_bg">
 
-        <LinearLayout
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mealpicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/frenchtoast"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/mealname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/mealpicture"
+            android:text="Ndole and plaintain"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mealcalories"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mealname"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/mealpicture"
+            android:text="Calories: 374 "
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/meallogo"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="3dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_forward" />
+
+=======
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
@@ -58,7 +95,7 @@
                     android:textSize="16dp" />
             </LinearLayout>
 
-        </LinearLayout>
+
 
         <ImageView
             android:layout_width="23dp"
