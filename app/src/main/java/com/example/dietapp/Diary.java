@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,7 +20,8 @@ import java.util.jar.Attributes;
 
 public class Diary extends AppCompatActivity {
 
-    View layout;
+
+    RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,14 @@ public class Diary extends AppCompatActivity {
 
         diarynavbar();
 
-        layout  = findViewById(R.id.addB);
+
+        RelativeLayout relativelayout = (RelativeLayout) findViewById(R.id.addB);
+        relativelayout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(Diary.this, ListFood.class));
+            }
+        });
     }
 
     public void diarynavbar(){
