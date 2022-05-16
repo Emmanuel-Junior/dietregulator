@@ -3,23 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/drawable-xxhdpi/navigationbar_item_selector.xml" value="0.224" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/drawable/main_navigationbar_background.xml" value="0.224" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/drawable/radiobg2.xml" value="0.224" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/drawable/round_bg.xml" value="0.224" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/drawable/selector.xml" value="0.224" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout-land/activity_you.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_4.xml" value="0.25" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_diary.xml" value="0.2" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_home.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_login.xml" value="0.18206521739130435" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_recipes.xml" value="0.22" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_settings.xml" value="0.1824074074074074" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_sign_up.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_splashscreen.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
-        <entry key="..\:/Users/ACER/Documents/GitHub/dietregulator/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/NWABUFO GODSTIME/AndroidStudioProjects/Dietapp/app/src/main/res/drawable/edittextbackground.xml" value="0.2115" />
         <entry key="..\:/Users/NWABUFO GODSTIME/AndroidStudioProjects/Dietapp/app/src/main/res/drawable/outline_buttonstyle.xml" value="0.2115" />
         <entry key="..\:/Users/NWABUFO GODSTIME/AndroidStudioProjects/Dietapp/app/src/main/res/layout-land/activity_goals.xml" value="0.21" />
@@ -42,6 +25,7 @@
         <entry key="app/src/main/res/drawable/ic_add_circle_2.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_arrow_forward.xml" value="0.226" />
+        <entry key="app/src/main/res/drawable/ic_attachment.xml" value="0.226" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_baseline_diary.xml" value="0.209" />
         <entry key="app/src/main/res/drawable/ic_baseline_home.xml" value="0.208" />
@@ -54,6 +38,7 @@
         <entry key="app/src/main/res/drawable/ic_dinner.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_done.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_email.xml" value="0.2275" />
+        <entry key="app/src/main/res/drawable/ic_flash.xml" value="0.226" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.208" />
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_lunch.xml" value="0.207" />
@@ -67,13 +52,14 @@
         <entry key="app/src/main/res/drawable/ic_wave__2_.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/imgborder.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/outline_buttonstyle.xml" value="0.208" />
+        <entry key="app/src/main/res/drawable/radiobg2.xml" value="0.226" />
         <entry key="app/src/main/res/drawable/round_bg.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/round_border.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/selector.xml" value="0.208" />
         <entry key="app/src/main/res/drawable/transparent_background.xml" value="0.225" />
         <entry key="app/src/main/res/layout-land/activity_goals.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.21205643437366395" />
-        <entry key="app/src/main/res/layout/activity_4.xml" value="0.20649850363403163" />
+        <entry key="app/src/main/res/layout/activity_4.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_diary.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_friends.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_goals.xml" value="0.25" />
