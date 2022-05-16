@@ -14,5 +14,6 @@
 .cxx
 local.properties
 .idea/misc.xml
-.idea/misc.xml
-.idea/misc.xml
+app/src/main/java/com/example/dietapp/Mealbtn.java
+app/src/main/java/com/example/dietapp/MealbtnAdapter.java
+

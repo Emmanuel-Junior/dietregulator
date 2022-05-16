@@ -3,13 +3,13 @@ package com.example.dietapp;
 public class MainModel {
 
     String name, picture;
-    int calories;
+    String calories;
 
     MainModel()
     {
 
     }
-    public MainModel(String name, String picture, int calories) {
+    public MainModel(String name, String picture, String calories) {
         this.name = name;
         this.picture = picture;
         this.calories = calories;
@@ -31,11 +31,11 @@ public class MainModel {
         this.picture = picture;
     }
 
-    public int getCalories() {
+    public String getCalories() {
         return calories;
     }
 
-    public void setCalories(int calories) {
+    public void setCalories(String calories) {
         this.calories = calories;
     }
 }

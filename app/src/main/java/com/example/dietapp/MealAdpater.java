@@ -30,7 +30,7 @@ public class MealAdpater extends FirebaseRecyclerAdapter<MainModel,MealAdpater.m
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull MainModel model) {
 
         holder.name.setText(model.getName());
-        holder.calories.setText(model.getName());
+        holder.calories.setText(model.getCalories()+" Kcal");
 
         Glide.with(holder.img.getContext())
                 .load(model.getPicture())
