@@ -16,4 +16,10 @@
     <color name="green1">#14e2d3</color>
     <color name="green_2">#34CCD9</color>
     <color name="light_grey">#EEEFEF</color>
+    <color name="Orange">#E64A19</color>
+    <color name="red">#98033E</color>
+    <color name="green">#48880F</color>
+    <color name="green_2_minus">#CEE7E9</color>
+    <color name="light_green">#E2F1D6</color>
+    <color name="lemon_green">#98F448</color>
 </resources>
