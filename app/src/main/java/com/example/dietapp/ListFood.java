@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -30,6 +31,7 @@ public class ListFood extends AppCompatActivity implements MealAdpater.OnNoteLis
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Meals"), MainModel.class)
                         .build();
 
+
         mealAdpater = new MealAdpater(options, this);
         recyclerview.setAdapter(mealAdpater);
     }
@@ -51,7 +53,7 @@ public class ListFood extends AppCompatActivity implements MealAdpater.OnNoteLis
 
         /* Log.d(TAG, "onNoteClick: clicked"); */
         Intent intent = new Intent(this, selectmeal.class);
-        intent.putExtra("Name",+mealAdpater.getItemId(position));
+        intent.putExtra("Name", (Parcelable) mealAdpater.getItem(position));
         startActivity(intent);
     }
 }
