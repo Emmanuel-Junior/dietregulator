@@ -1,11 +1,23 @@
 package com.example.dietapp;
 
-public class MainModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class MainModel implements Parcelable {
 
     String name, picture;
     String calories;
 
-    MainModel()
+    @Override
+    public String toString() {
+        return "MainModel{" +
+                "name='" + name + '\'' +
+                ", picture='" + picture + '\'' +
+                ", calories='" + calories + '\'' +
+                '}';
+    }
+
+    public MainModel()
     {
 
     }
@@ -14,6 +26,24 @@ public class MainModel {
         this.picture = picture;
         this.calories = calories;
     }
+
+    protected MainModel(Parcel in) {
+        name = in.readString();
+        picture = in.readString();
+        calories = in.readString();
+    }
+
+    public static final Creator<MainModel> CREATOR = new Creator<MainModel>() {
+        @Override
+        public MainModel createFromParcel(Parcel in) {
+            return new MainModel(in);
+        }
+
+        @Override
+        public MainModel[] newArray(int size) {
+            return new MainModel[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -37,5 +67,17 @@ public class MainModel {
 
     public void setCalories(String calories) {
         this.calories = calories;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(picture);
+        parcel.writeString(calories);
     }
 }

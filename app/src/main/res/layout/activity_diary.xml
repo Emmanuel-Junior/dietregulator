@@ -263,7 +263,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="12g left" />
+                            android:text="0g left" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -287,7 +287,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12g left" />
+                        android:text="0g left" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -312,7 +312,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12g left" />
+                        android:text="0g left" />
                 </LinearLayout>
             </RelativeLayout>
             </RelativeLayout>
