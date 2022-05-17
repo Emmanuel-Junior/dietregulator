@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,6 +23,7 @@ public class Diary extends AppCompatActivity {
 
 
     RelativeLayout relativeLayout;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class Diary extends AppCompatActivity {
 
         diarynavbar();
 
+        progressBar = findViewById(R.id.progressBar);
 
         RelativeLayout relativelayout = (RelativeLayout) findViewById(R.id.addB);
         relativelayout.setOnClickListener(new View.OnClickListener(){
