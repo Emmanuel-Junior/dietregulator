@@ -160,7 +160,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="5dp"
             android:background="@drawable/round_bg"
-            android:text="Save"
+            android:text="Add Meal"
             android:textColor="@color/blu_white" />
 
 

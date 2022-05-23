@@ -97,24 +97,22 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/txtView3"
+                        android:id="@+id/calories"
                         android:layout_width="28dp"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="30sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/txtview4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="27dp"
-                        android:layout_weight="1"
+                        android:layout_weight="0.2"
                         android:text="Kcl"
-                        android:textAlignment="viewStart"
+                        android:gravity="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
@@ -209,21 +207,19 @@
                         android:id="@+id/txtView7"
                         android:layout_width="28dp"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="30sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/txtview8"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="27dp"
-                        android:layout_weight="1"
+                        android:layout_weight="0.2"
                         android:text="Kcl"
-                        android:textAlignment="viewStart"
+                        android:gravity="center"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
@@ -255,12 +251,14 @@
                         android:orientation="vertical">
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="CARBS"
                             android:textColor="@color/white" />
 
                         <TextView
+                            android:id="@+id/carbvalue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0g left" />

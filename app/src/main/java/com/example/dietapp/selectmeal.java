@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +47,22 @@ public class selectmeal extends AppCompatActivity {
         food.setText(name.getName());
         calory.setText(String.format("%s kcal", name.getCalories()));
 
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(selectmeal.this, Diary.class);
+                i.putExtra("calories", name);
+                //Toast.makeText(selectmeal.this, ""+name, Toast.LENGTH_LONG).show();
+                startActivity(i);
+            }
+        });
+
+//        delete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
 
     }
 }

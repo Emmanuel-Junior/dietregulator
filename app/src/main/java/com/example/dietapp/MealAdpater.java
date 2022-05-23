@@ -51,6 +51,7 @@ public class MealAdpater extends FirebaseRecyclerAdapter<MainModel,MealAdpater.m
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_items,parent,false);
         return new myViewHolder(view, monNoteListener);
+        //return null;
     }
 
     class myViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

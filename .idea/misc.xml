@@ -39,6 +39,7 @@
         <entry key="app/src/main/res/drawable/ic_done.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_email.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_flash.xml" value="0.226" />
+        <entry key="app/src/main/res/drawable/ic_floatbtn.xml" value="0.1075" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.208" />
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_lunch.xml" value="0.207" />
@@ -63,12 +64,12 @@
         <entry key="app/src/main/res/layout/activity_diary.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_friends.xml" value="0.20649850363403163" />
         <entry key="app/src/main/res/layout/activity_goals.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.20649850363403163" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_listof_food.xml" value="0.21419410004275333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_plans.xml" value="0.20649850363403163" />
-        <entry key="app/src/main/res/layout/activity_recipes.xml" value="0.20649850363403163" />
+        <entry key="app/src/main/res/layout/activity_recipes.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_selectmeal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.20649850363403163" />
