@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 openloginactivity(); }
         });
     }
+
+
+
+    
     public void openloginactivity(){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
@@ -57,20 +61,21 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
     }
+
+
     public void videoview() {videoview = (VideoView) findViewById(R.id.video_view);
 
-    String path = "android.resource://com.example.dietapp/"+R.raw.video;
-    Uri u= Uri.parse(path);
-    videoview.setVideoURI(u);
-    videoview.start();
+        String path = "android.resource://com.example.dietapp/"+R.raw.video;
+        Uri u= Uri.parse(path);
+        videoview.setVideoURI(u);
+        videoview.start();
 
-    videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-        @Override
-        public void onPrepared(MediaPlayer mediaPlayer) {
-            mediaPlayer.setLooping(true);
-        }
-    });}
-
+        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });}
     @Override
     protected void onResume(){
         videoview.resume();
@@ -86,4 +91,5 @@ public class MainActivity extends AppCompatActivity {
         videoview.stopPlayback();
         super.onDestroy();
     }
+   
 }
