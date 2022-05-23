@@ -16,6 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
     EditText age;
     Calendar calendar;
     RadioButton male,female;
+    RadioGroup radioGroup;
     EditText inputweight, inputheight;
 
 
@@ -46,6 +48,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
 //        spinnermethod();
         age = findViewById(R.id.age);
         male = findViewById(R.id.male);
+        radioGroup = findViewById(R.id.radioGroup);
         female = findViewById(R.id.female);
         inputweight = findViewById(R.id.inputweight);
         inputheight = findViewById(R.id.inputheight);
@@ -56,7 +59,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
                 if(age.getText().toString().trim().length() == 0 ||
                  inputweight.getText().toString().trim().length() == 0 ||
                         inputheight.getText().toString().trim().length() == 0 ||
-                        male.getText().toString().trim().length() == 0 ){
+                        radioGroup.getCheckedRadioButtonId() == -1){
                     Toast.makeText(You.this, "Fill the form please", Toast.LENGTH_SHORT).show();
                 }
                 else {

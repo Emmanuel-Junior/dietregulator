@@ -56,7 +56,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="5dp"
         android:ems="10"
-        android:hint="Target weight (kg)"
+        android:hint="Target weight in (kg)"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
