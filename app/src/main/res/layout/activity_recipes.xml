@@ -6,58 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".Recipes">
 
-
-    <TextView
-        android:id="@+id/createmeal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Add Your Own Meal"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/nameoffood"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="Food Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createmeal" />
-    <EditText
-        android:id="@+id/foodcalory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Amount of Calories"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameoffood" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:background="">
 
-    <EditText
-        android:id="@+id/pictureoffood"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:hint="Picture if any"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foodcalory" />
+        <TextView
+            android:id="@+id/createmeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/create_your_own_meal"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/addfood"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Add Meal"
-        android:background="@color/green_2"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pictureoffood" />
+        <EditText
+            android:id="@+id/nameoffood"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/createmeal"
+            android:hint="Food Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createmeal" />
 
+        <EditText
+            android:id="@+id/foodcalory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Amount of Calories"
+            android:layout_below="@id/nameoffood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameoffood" />
+
+        <EditText
+            android:id="@+id/pictureoffood"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Picture if any"
+            android:layout_below="@id/foodcalory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodcalory" />
+
+        <Button
+            android:id="@+id/addfood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pictureoffood"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_bg"
+            android:text="Add Meal"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pictureoffood" />
+
+    </RelativeLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

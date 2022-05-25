@@ -34,6 +34,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
     EditText age;
     Calendar calendar;
     RadioButton male,female;
+    RadioButton radioButton;
     RadioGroup radioGroup;
     EditText inputweight, inputheight;
 
@@ -52,7 +53,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
         female = findViewById(R.id.female);
         inputweight = findViewById(R.id.inputweight);
         inputheight = findViewById(R.id.inputheight);
-        button = (Button) findViewById(R.id.btn1);
+        button = findViewById(R.id.btn1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +64,7 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
                     Toast.makeText(You.this, "Fill the form please", Toast.LENGTH_SHORT).show();
                 }
                 else {
+
                     weight = Float.valueOf(inputweight.getText().toString());
                     height = Float.valueOf(inputheight.getText().toString());
                     bmi = weight / (height * height);
@@ -83,6 +85,13 @@ public class You extends AppCompatActivity implements AdapterView.OnItemSelected
     }
     public void opennextpage() {
         Intent intent = new Intent(this, Goals.class);
+        int selectecId = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(selectecId);
+        intent.putExtra("Gender", String.valueOf(radioButton));
+        intent.putExtra("Age", String.valueOf(age));
+        intent.putExtra("Weight", String.valueOf(weight));
+        intent.putExtra("Height", String.valueOf(height));
+        intent.putExtra("Bmi", String.valueOf(bmi));
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

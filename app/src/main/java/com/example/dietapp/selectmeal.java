@@ -40,7 +40,7 @@ public class selectmeal extends AppCompatActivity {
         calory = findViewById(R.id.caloryvalue);
         add = findViewById(R.id.save);
         delete = findViewById(R.id.cancel);
-        ref = FirebaseDatabase.getInstance().getReference().child("Meals");
+        ref = FirebaseDatabase.getInstance().getReference("FoodEaten");
 
         MainModel name = getIntent().getParcelableExtra("Name");
         Glide.with(this).load(name.getPicture()).into(imageview);
@@ -51,7 +51,8 @@ public class selectmeal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(selectmeal.this, Diary.class);
-                i.putExtra("calories", name);
+                showcalorieseaten();
+                //i.putExtra("calories", name);
                 //Toast.makeText(selectmeal.this, ""+name, Toast.LENGTH_LONG).show();
                 startActivity(i);
             }
@@ -63,6 +64,19 @@ public class selectmeal extends AppCompatActivity {
 //
 //            }
 //        });
+
+    }
+
+    public void showcalorieseaten(){
+        String Calories = calory.getText().toString();
+        String Name = food.getText().toString();
+
+        String id = ref.push().getKey();
+        foodeaten eaten = new foodeaten(id,Calories,Name);
+
+        ref.child(id).setValue(eaten);
+        calory.setText("");
+        food.setText("");
 
     }
 }
