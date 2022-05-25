@@ -14,6 +14,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Diary extends AppCompatActivity {
 
@@ -23,6 +28,8 @@ public class Diary extends AppCompatActivity {
     RelativeLayout btnD;
     ProgressBar progressBar;
     TextView cals;
+    double calorySum=0;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,7 @@ public class Diary extends AppCompatActivity {
                 startActivity(new Intent(Diary.this, ListFood.class));
             }
         });
+        getcalories();
 
     }
 public class firsttake extends AsyncTask<String, String, MainModel> {
@@ -108,6 +116,27 @@ public void diarynavbar(){
                         return true;
                 }
                 return false;
+            }
+        });
+    }
+    public void getcalories(){
+        FirebaseDatabase fb = FirebaseDatabase.getInstance();
+        DatabaseReference mRef=fb.getReference("FoodEaten");
+        mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot ds:snapshot.getChildren()){
+                   foodeaten fe= ds.getValue( foodeaten.class);
+                    String calory= fe.getFoodcalory().replace("kcal","").trim();
+                    double caloryData=Double.parseDouble(calory);
+                    calorySum+=caloryData;
+                }
+                cals.setText(""+calorySum);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }
