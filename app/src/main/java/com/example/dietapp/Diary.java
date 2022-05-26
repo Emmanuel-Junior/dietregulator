@@ -22,13 +22,16 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Diary extends AppCompatActivity {
 
-
     RelativeLayout relativeLayout;
     RelativeLayout btnL;
     RelativeLayout btnD;
     ProgressBar progressBar;
-    TextView cals;
+    TextView cals,Carbohydrate, Fats, Protein;
+
     double calorySum=0;
+    double carbsSum=0;
+    double fatsSum=0;
+    double proteinSum=0;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -38,6 +41,9 @@ public class Diary extends AppCompatActivity {
 
         diarynavbar();
         cals = findViewById(R.id.calories);
+        Carbohydrate = findViewById(R.id.carbs);
+        Fats = findViewById(R.id.fats);
+        Protein = findViewById(R.id.protein);
 
         new firsttake().execute();
 
@@ -119,6 +125,7 @@ public void diarynavbar(){
             }
         });
     }
+
     public void getcalories(){
         FirebaseDatabase fb = FirebaseDatabase.getInstance();
         DatabaseReference mRef=fb.getReference("FoodEaten");
@@ -128,10 +135,22 @@ public void diarynavbar(){
                 for(DataSnapshot ds:snapshot.getChildren()){
                    foodeaten fe= ds.getValue( foodeaten.class);
                     String calory= fe.getFoodcalory().replace("kcal","").trim();
+                    String carbs= fe.getFoodcarbs().replace("g","").trim();
+                    String fats= fe.getFoodfats().replace("g","").trim();
+                    String protein= fe.getFoodprotein().replace("g","").trim();
                     double caloryData=Double.parseDouble(calory);
+                    double carbsData=Double.parseDouble(carbs);
+                    double fatsData=Double.parseDouble(fats);
+                    double proteinData=Double.parseDouble(protein);
                     calorySum+=caloryData;
+                    carbsSum+=carbsData;
+                    fatsSum+=fatsData;
+                    proteinSum+=proteinData;
                 }
                 cals.setText(""+calorySum);
+                Carbohydrate.setText(""+carbsSum);
+                Fats.setText(""+fatsSum);
+                Protein.setText(""+proteinSum);
             }
 
             @Override
