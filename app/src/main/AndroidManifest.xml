@@ -11,11 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dietapp.NoActionBar">
-        <activity
-            android:name=".navdrawer_test"
-            android:exported="false"
-            android:label="@string/title_activity_navdrawer_test"
-            android:theme="@style/Theme.Dietapp.NoActionBar.NoActionBar" />
+
         <activity
             android:name=".selectmeal"
             android:exported="false" />
