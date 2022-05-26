@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dietapp.NoActionBar">
         <activity
+            android:name=".navdrawer_test"
+            android:exported="false"
+            android:label="@string/title_activity_navdrawer_test"
+            android:theme="@style/Theme.Dietapp.NoActionBar.NoActionBar" />
+        <activity
             android:name=".selectmeal"
             android:exported="false" />
         <activity
@@ -30,8 +35,14 @@
             android:theme="@style/Theme.Dietapp.NoActionBar" />
         <activity
             android:name=".Home"
-            android:exported="false"
-            android:theme="@style/Theme.Dietapp.NoActionBar" />
+            android:exported="true"
+            android:theme="@style/Theme.Dietapp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Diary"
             android:exported="false"
@@ -63,13 +74,7 @@
         <activity
             android:name=".Splashscreen"
             android:exported="true"
-            android:theme="@style/Theme.Dietapp.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.Dietapp.NoActionBar"></activity>
     </application>
 
 </manifest>

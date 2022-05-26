@@ -78,9 +78,15 @@
         <entry key="app/src/main/res/layout/activity_you.xml" value="0.25" />
         <entry key="app/src/main/res/layout/adddinnerbtnbg.xml" value="0.2159042325780248" />
         <entry key="app/src/main/res/layout/adlunchbtnbg.xml" value="0.2159042325780248" />
+        <entry key="app/src/main/res/layout/app_bar_navdrawer_test.xml" value="0.21504916631038906" />
+        <entry key="app/src/main/res/layout/content_navdrawer_test.xml" value="0.22445489525438223" />
         <entry key="app/src/main/res/layout/fragment_diary.xml" value="0.20350577169730655" />
         <entry key="app/src/main/res/layout/fragment_diary2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.21504916631038906" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21504916631038906" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.21504916631038906" />
         <entry key="app/src/main/res/layout/list_items.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/nav_header_navdrawer_test.xml" value="0.21504916631038906" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.165" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20649850363403163" />
       </map>

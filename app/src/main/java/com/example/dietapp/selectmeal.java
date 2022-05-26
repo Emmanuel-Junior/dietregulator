@@ -26,6 +26,7 @@ public class selectmeal extends AppCompatActivity {
     ImageView imageview;
     TextView food;
     TextView calory;
+    TextView Fats, Carbs, Protein;
     Button add, delete;
 
     DatabaseReference ref;
@@ -38,13 +39,20 @@ public class selectmeal extends AppCompatActivity {
         imageview = findViewById(R.id.foodpicture);
         food = findViewById(R.id.foodname);
         calory = findViewById(R.id.caloryvalue);
+        Fats = findViewById(R.id.fatsvalue);
+        Carbs = findViewById(R.id.carbsvalue);
+        Protein = findViewById(R.id.proteinvalue);
         add = findViewById(R.id.save);
         delete = findViewById(R.id.cancel);
+
         ref = FirebaseDatabase.getInstance().getReference("FoodEaten");
 
         MainModel name = getIntent().getParcelableExtra("Name");
         Glide.with(this).load(name.getPicture()).into(imageview);
         food.setText(name.getName());
+        Fats.setText(String.format("%s g", name.getFats()));
+        Carbs.setText(String.format("%s g", name.getCarbs()));
+        Protein.setText(String.format("%s g", name.getProtein()));
         calory.setText(String.format("%s kcal", name.getCalories()));
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -70,13 +78,19 @@ public class selectmeal extends AppCompatActivity {
     public void showcalorieseaten(){
         String Calories = calory.getText().toString();
         String Name = food.getText().toString();
+        String mFats = Fats.getText().toString();
+        String mCarbs = Carbs.getText().toString();
+        String mProtein = Protein.getText().toString();
 
         String id = ref.push().getKey();
-        foodeaten eaten = new foodeaten(id,Calories,Name);
+        foodeaten eaten = new foodeaten(id,Calories,Name,mCarbs,mFats,mProtein);
 
         ref.child(id).setValue(eaten);
         calory.setText("");
         food.setText("");
+        Fats.setText("");
+        Carbs.setText("");
+        Protein.setText("");
 
     }
 }

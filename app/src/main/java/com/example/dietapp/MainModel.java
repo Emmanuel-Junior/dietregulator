@@ -7,6 +7,9 @@ public class MainModel implements Parcelable {
 
     String name, picture;
     String calories;
+    String fats;
+    String carbs;
+    String protein;
 
     @Override
     public String toString() {
@@ -14,6 +17,9 @@ public class MainModel implements Parcelable {
                 "name='" + name + '\'' +
                 ", picture='" + picture + '\'' +
                 ", calories='" + calories + '\'' +
+                ", fats='" + fats + '\'' +
+                ", carbs='" + carbs + '\'' +
+                ", protein='" + protein + '\'' +
                 '}';
     }
 
@@ -21,16 +27,22 @@ public class MainModel implements Parcelable {
     {
 
     }
-    public MainModel(String name, String picture, String calories) {
+    public MainModel(String name, String picture, String calories, String fats, String carbs, String protein) {
         this.name = name;
         this.picture = picture;
         this.calories = calories;
+        this.fats = fats;
+        this.carbs = carbs;
+        this.protein = protein;
     }
 
     protected MainModel(Parcel in) {
         name = in.readString();
         picture = in.readString();
         calories = in.readString();
+        fats = in.readString();
+        carbs = in.readString();
+        protein = in.readString();
     }
 
     public static final Creator<MainModel> CREATOR = new Creator<MainModel>() {
@@ -69,6 +81,18 @@ public class MainModel implements Parcelable {
         this.calories = calories;
     }
 
+    public String getFats() { return fats; }
+
+    public void setFats(String fats) { this.fats = fats; }
+
+    public String getCarbs() { return carbs; }
+
+    public void setCarbs(String carbs) { this.carbs = carbs; }
+
+    public String getProtein() { return protein; }
+
+    public void setProtein(String protein) { this.protein = protein; }
+
     @Override
     public int describeContents() {
         return 0;
@@ -79,5 +103,8 @@ public class MainModel implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(picture);
         parcel.writeString(calories);
+        parcel.writeString(fats);
+        parcel.writeString(carbs);
+        parcel.writeString(protein);
     }
 }
