@@ -19,19 +19,19 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
-            android:layout_height="69dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-
+            android:layout_marginBottom="6dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtview"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/my_diary"
                 android:textColor="@color/white"
@@ -50,7 +50,7 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="144dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/linearLayout"
             android:orientation="horizontal">
 
@@ -58,65 +58,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        app:srcCompat="@drawable/ic_lunch"
-                        android:contentDescription="@string/eaten" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/txtView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/kcal_consumed"
-                        android:text="@string/eaten"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/eaten"
+                            android:textAlignment="center"
+                            app:srcCompat="@drawable/ic_lunch" />
+
+                        <TextView
+                            android:id="@+id/txtView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/kcal_consumed"
+                            android:text="@string/eaten"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/calories"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txtview4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="Kcl"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/calories"
-                        android:layout_width="28dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="0"
-                        android:gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/txtview4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-                        android:text="Kcl"
-                        android:gravity="center"
-                        android:textColor="@color/white" />
-                </LinearLayout>
-            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="170dp"
@@ -168,62 +168,62 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_alignParentEnd="true">
-
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_fire" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/txtView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:text="BURNED"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_fire" />
+
+                        <TextView
+                            android:id="@+id/txtView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:text="BURNED"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtView7"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/txtview8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:text="Kcl"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/txtView7"
-                        android:layout_width="28dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="0"
-                        android:gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/txtview8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"
-                        android:text="Kcl"
-                        android:gravity="center"
-                        android:textColor="@color/white" />
-                </LinearLayout>
-            </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
 
@@ -355,6 +355,8 @@
         android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/ic_wave__1_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -379,32 +381,15 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="wrap_content"
-        android:layout_height="65dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
-
     <LinearLayout
+        android:id="@+id/btnslayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3">
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -415,6 +400,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <RelativeLayout
                     android:id="@+id/addB"
@@ -442,7 +434,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="10dp"
-                                android:src="@drawable/frenchtoast"></de.hdodenhof.circleimageview.CircleImageView>
+                                android:src="@drawable/frenchtoast" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -506,7 +498,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="10dp"
-                                android:src="@drawable/lunch"></de.hdodenhof.circleimageview.CircleImageView>
+                                android:src="@drawable/lunch" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -569,7 +561,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="10dp"
-                                android:src="@drawable/dinner"></de.hdodenhof.circleimageview.CircleImageView>
+                                android:src="@drawable/dinner" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -642,7 +634,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="10dp"
-                                android:src="@drawable/glassofwater"></de.hdodenhof.circleimageview.CircleImageView>
+                                android:src="@drawable/glassofwater" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -655,7 +647,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="20dp"
-                                    android:text="Add Water"
+                                    android:text="@string/add_water"
                                     android:textColor="@color/black"
                                     android:textSize="25sp"
                                     android:textStyle="bold" />
@@ -707,7 +699,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="10dp"
-                                android:src="@drawable/exercise"></de.hdodenhof.circleimageview.CircleImageView>
+                                android:src="@drawable/exercise" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
