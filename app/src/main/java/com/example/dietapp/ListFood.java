@@ -16,9 +16,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dietapp.roomdb.Meals;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
@@ -29,6 +31,7 @@ public class ListFood extends AppCompatActivity implements MealAdpater.OnNoteLis
     //MealsAdapterII mealsAdapterII;
     //ViewModel mealViewModel;
     MealAdpater mealAdpater;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class ListFood extends AppCompatActivity implements MealAdpater.OnNoteLis
 
         //mealViewModel = ViewModelProviders.of(this).get(ViewModel.class);
 
+        fab = findViewById(R.id.barcode_btn);
         recyclerview = findViewById(R.id.rv);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
 //        recyclerview.setHasFixedSize(true);
@@ -52,6 +56,12 @@ public class ListFood extends AppCompatActivity implements MealAdpater.OnNoteLis
 //                }
 //            }
 //        });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ListFood.this, "You clicked on FLOATBTN", Toast.LENGTH_SHORT).show();
+            }
+        });
 
  FirebaseRecyclerOptions<MainModel> options =
          new FirebaseRecyclerOptions.Builder<MainModel>()
@@ -61,7 +71,6 @@ public class ListFood extends AppCompatActivity implements MealAdpater.OnNoteLis
  recyclerview.setAdapter(mealAdpater);
 
     }
-
 
 
 
