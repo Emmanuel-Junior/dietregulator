@@ -1,11 +1,13 @@
 package com.example.dietapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,11 +29,11 @@ public class Diary extends AppCompatActivity {
     RelativeLayout btnD;
     ProgressBar progressBar;
     TextView cals,Carbohydrate, Fats, Protein;
+    TextView progresstext;
 
-    double calorySum=0;
-    double carbsSum=0;
-    double fatsSum=0;
-    double proteinSum=0;
+    double calorySum=0, carbsSum=0,fatsSum=0,proteinSum=0;
+    double progresslevel = 0;
+    double valueProgress= 0;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -44,6 +46,8 @@ public class Diary extends AppCompatActivity {
         Carbohydrate = findViewById(R.id.carbs);
         Fats = findViewById(R.id.fats);
         Protein = findViewById(R.id.protein);
+        progresstext = findViewById(R.id.text_view_progress);
+        //updateProgress();
 
         new firsttake().execute();
 
@@ -57,14 +61,12 @@ public class Diary extends AppCompatActivity {
                 startActivity(new Intent(Diary.this, ListFood.class));
             }
         });
-
         btnL.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 startActivity(new Intent(Diary.this, ListFood.class));
             }
         });
-
         btnD.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -90,7 +92,6 @@ public class firsttake extends AsyncTask<String, String, MainModel> {
     protected void onPreExecute() {
         super.onPreExecute();
     }
-
 }
 
 public void diarynavbar(){
@@ -130,6 +131,7 @@ public void diarynavbar(){
         FirebaseDatabase fb = FirebaseDatabase.getInstance();
         DatabaseReference mRef=fb.getReference("FoodEaten");
         mRef.addValueEventListener(new ValueEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ds:snapshot.getChildren()){
@@ -146,17 +148,21 @@ public void diarynavbar(){
                     carbsSum+=carbsData;
                     fatsSum+=fatsData;
                     proteinSum+=proteinData;
+
+                    valueProgress=2000-calorySum;
                 }
                 cals.setText(""+calorySum);
                 Carbohydrate.setText(""+carbsSum);
                 Fats.setText(""+fatsSum);
                 Protein.setText(""+proteinSum);
+                progresstext.setText(new StringBuilder().append("").append((int) valueProgress).toString());
+                progressBar.setProgress((int) valueProgress);
+                progressBar.setMin(0);
+                progressBar.setMax(2000);
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
     }
 

@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarDataSet;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -17,6 +19,8 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         homenavbar();
+        BarChart barChart = findViewById(R.id.barchat);
+        //BarDataSet barDataSet = new BarDataSet();
     }
     public void homenavbar(){
         //Initialize and assign Variables

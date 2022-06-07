@@ -6,12 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".Recipes">
 
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:title="Your Meals">
+
+        <ImageView
+            android:id="@+id/createmealbtn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_more_vert"
+            android:layout_gravity="end"/>
+    </Toolbar>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="10dp">
@@ -34,43 +53,43 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@id/createmeal"
-            android:hint="Food Name"
+            android:hint="@string/food_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/createmeal" />
 
         <EditText
-            android:id="@+id/foodcalory"
+            android:id="@+id/amountofprotein"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Amount of Calories"
             android:layout_below="@id/nameoffood"
+            android:hint="Amount of Protein"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameoffood" />
 
         <EditText
-            android:id="@+id/pictureoffood"
+            android:id="@+id/amountofcarbs"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Picture if any"
-            android:layout_below="@id/foodcalory"
+            android:layout_below="@id/amountofprotein"
+            android:hint="Amount of carbs"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/foodcalory" />
+            app:layout_constraintTop_toBottomOf="@+id/amountofprotein" />
 
         <Button
             android:id="@+id/addfood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/pictureoffood"
+            android:layout_below="@id/amountofcarbs"
             android:layout_marginTop="20dp"
             android:background="@drawable/round_bg"
             android:text="Add Meal"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pictureoffood" />
+            app:layout_constraintTop_toBottomOf="@+id/amountofcarbs" />
 
     </RelativeLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
