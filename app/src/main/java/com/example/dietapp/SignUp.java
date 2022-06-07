@@ -27,7 +27,6 @@ public class SignUp extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,14 +39,10 @@ public class SignUp extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
-
-
         button = (Button) findViewById(R.id.sign_up);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 PerformAuth();
                 //finish();
             }
@@ -58,6 +53,10 @@ public class SignUp extends AppCompatActivity {
         String Email = email.getText().toString();
         String Password = password.getText().toString();
         String ConfirmPassword =ConfirmPswd.getText().toString();
+
+//        String usertarget = getIntent().getStringExtra("Target");
+//        String userbehaviour = getIntent().getStringExtra("behaviour");
+//        String usergoal = getIntent().getStringExtra("goal");
 
         if(!Email.matches(emailPattern)){
             email.setError("Enter correct email");
@@ -91,8 +90,26 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void sendUsertoNextActivity() {
+        String usertarget = getIntent().getStringExtra("Target");
+        String userbehaviour = getIntent().getStringExtra("behaviour");
+        String usergoal = getIntent().getStringExtra("goal");
+        String usergender = getIntent().getStringExtra("gender");
+        String userage = getIntent().getStringExtra("age");
+        String userweight = getIntent().getStringExtra("weight");
+        String userheight = getIntent().getStringExtra("height");
+        String userbmi = getIntent().getStringExtra("bmi");
+
         Intent intent = new Intent(SignUp.this, Home.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        intent.putExtra("target", usertarget);
+        intent.putExtra("behaviour", userbehaviour);
+        intent.putExtra("goal", usergoal);
+        intent.putExtra("gender", usergender);
+        intent.putExtra("age", userage);
+        intent.putExtra("weight", userweight);
+        intent.putExtra("height", userheight);
+        intent.putExtra("bmi", userbmi);
         startActivity(intent);
     }
 }
