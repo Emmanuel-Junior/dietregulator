@@ -151,9 +151,9 @@ public void diarynavbar(){
 
                     valueProgress=2000-calorySum;
                 }
-                cals.setText(""+calorySum);
-                Carbohydrate.setText(""+carbsSum);
-                Fats.setText(""+fatsSum);
+                cals.setText(String.format("%s", calorySum));
+                Carbohydrate.setText(String.format("%s", carbsSum));
+                Fats.setText(String.format("%s", fatsSum));
                 Protein.setText(""+proteinSum);
                 progresstext.setText(new StringBuilder().append("").append((int) valueProgress).toString());
                 progressBar.setProgress((int) valueProgress);

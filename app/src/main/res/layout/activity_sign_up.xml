@@ -120,4 +120,80 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_person" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/l1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/or"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="OR"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/l2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/or"
+                android:background="@color/black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sign Up with"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/googlebtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/common_google_signin_btn_icon_light" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
