@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-import com.example.dietapp.roomdb.Meals;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Recipes extends AppCompatActivity {
