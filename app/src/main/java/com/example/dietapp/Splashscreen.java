@@ -3,6 +3,7 @@ package com.example.dietapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -39,14 +40,27 @@ public class Splashscreen extends AppCompatActivity {
     private final static int RC_SIGN_IN= 123;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splashscreen);
 
+        SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        boolean firstStart = preferences.getBoolean("firststart",true);
+        if (firstStart) {
+            animation();
+            splashscreen();
+        }
 //        mUser = mAuth.getCurrentUser();
-        animation();
-        splashscreen();
+
+
     }
     public void animation(){
         //Animation
@@ -65,5 +79,10 @@ public class Splashscreen extends AppCompatActivity {
                 finish();
             }
         },SPLASH_SCREEN);
+        SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("firstart", false);
+        editor.apply();
+
     }
 }
